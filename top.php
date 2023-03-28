@@ -20,10 +20,6 @@ declare(strict_types=1);
 <body>
 
     <div class="wrapper">
-        <header>
-            <a href="top">プログラミング備忘録</a>
-            <a href="top" class="mini_message">東京砂漠に生きる週末SE。<br>ここに備忘録を記します。</a>
-        </header>
         <main>
             <div class="main_column">
                 <?php require_once("./topContent.php") ?>
