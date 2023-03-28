@@ -1,5 +1,5 @@
 <div class="col-md-9 mx-auto search_form_container">
-    <form name="search_form" action=<?php echo "preview.php" ?> method="GET">
+    <form name="search_form" action=<?php echo "preview" ?> method="GET">
         <!-- 検索語を入力するフォーム -->
         <div class="form-group">
             <label>検索語</label>
