@@ -1,8 +1,8 @@
 <?php
 
 declare(strict_types=1);
-require_once("./app/model/classCookie.php");
-require_once("./app/model/classSearchHistoryGetter.php");
+require_once("./app/model/cookie.php");
+require_once("./app/classSearchHistoryGetter.php");
 header("Cache-Control: no-cache, must-revalidate");
 
 // クッキーを取得
