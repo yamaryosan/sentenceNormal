@@ -7,7 +7,7 @@ require_once("./app/model/cookie.php");
  * @param string $inputString 入力されていた文字列
  * 
  */
-class previousInputString
+class PreviousInputString
 {
     private string $inputString;
     public function __construct(string $cookieName)
