@@ -1,6 +1,22 @@
 <?php
 
 declare(strict_types=1);
+require_once("./app/classCookie.php");
+require_once("./app/classSearchHistoryGetter.php");
+header("Cache-Control: no-cache, must-revalidate");
+
+// クッキーを取得
+if (isset($_COOKIE["search_word_cookie"])) {
+    $cookie = new Cookie($_COOKIE["search_word_cookie"]);
+    $previousSearchWord = $cookie->getString();
+} else {
+    $previousSearchWord = "";
+}
+
+// 履歴取得
+$historyShowNumber = 10;
+$searchHistoryGetter = new SearchHistoryGetter($historyShowNumber);
+$result = $searchHistoryGetter->get();
 
 ?>
 
@@ -13,25 +29,22 @@ declare(strict_types=1);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style_common.css">
     <link rel="stylesheet" href="./css/style_top.css">
-    <link rel="stylesheet" href="./css/style_side_column.css">
     <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
 </head>
 
 <body>
-
-    <div class="wrapper">
-        <main>
-            <div class="main_column">
-                <?php require_once("./topContent.php") ?>
+    <header>
+        <h1>
+            <a href=<?php echo "top.php" ?>>プログラミング備忘録</a>
+        </h1>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <?php require_once("./app/view/searchInputForm.php"); ?>
             </div>
-            <div class="side_column">
-                <?php require("sideColumn.php") ?>
-            </div>
-        </main>
-        <footer>
-            <p>© programmingnokemono <?php echo date("Y") ?></p>
-        </footer>
-    </div>
+        </div>
+    </main>
     <?php if (empty($_POST["search_word"])) : ?>
         <script>
             alert(<?php echo "検索語を入力してください"; ?>)
