@@ -3,7 +3,7 @@
         <!-- 検索語を入力するフォーム -->
         <div class="form-group">
             <label>検索語</label>
-            <input type="text" class="form-control" name="search_word" placeholder="検索語を入力" value='<?php echo $previousSearchWord ?>'>
+            <input type="text" class="form-control" name="search_word" placeholder="検索語を入力" value='<?php echo $previousInputString ?>'>
         </div>
         <!-- 検索箇所を入力するフォーム -->
         <div class="radio_container">
