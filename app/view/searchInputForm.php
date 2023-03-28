@@ -1,9 +1,9 @@
 <div class="col-md-9 mx-auto search_form_container">
-    <form name="search_form" action=<?php echo "previewPage.php" ?> method="GET">
+    <form name="search_form" action=<?php echo "preview.php" ?> method="GET">
         <!-- 検索語を入力するフォーム -->
         <div class="form-group">
             <label>検索語</label>
-            <input type="text" class="form-control" name="search_word" value=<?php echo $previousSearchWord ?>>
+            <input type="text" class="form-control" name="search_word" placeholder="検索語を入力" value='<?php echo $previousSearchWord ?>'>
         </div>
         <!-- 検索箇所を入力するフォーム -->
         <div class="radio_container">
