@@ -17,7 +17,7 @@ class SearchHistorySaver
         $this->searchWords = $searchWords;
     }
 
-    public function SaveSearchHistoryIfTopPage(string $referrer)
+    public function SaveSearchHistoryIfTopPage(string $referrer): void
     {
         // 遷移元が検索ページのときのみ履歴を保存
         if (is_integer(strpos($referrer, "top")) === true) {
@@ -26,7 +26,7 @@ class SearchHistorySaver
             // 何もしない
         }
     }
-    public function save()
+    public function save(): void
     {
         $dbh = (new Database())->connect();
         // テーブルがなければ、作成
