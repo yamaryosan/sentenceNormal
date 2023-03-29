@@ -10,7 +10,7 @@ class SearchWords
 {
     private array $words;
 
-    public function __construct($postWords)
+    public function __construct(string $postWords)
     {
         $normalizedString = $this->normalize($postWords);
         $SearchWordsArray = $this->splitByComma($normalizedString);
@@ -22,7 +22,7 @@ class SearchWords
         return $this->words;
     }
 
-    public function getStringByComma()
+    public function getStringByComma(): string
     {
         $string = "";
         foreach ($this->words as $word) {
@@ -33,7 +33,7 @@ class SearchWords
     }
 
     // 表記ゆれ解消
-    public function normalize(string $string)
+    public function normalize(string $string): string
     {    // 読点(、)をコンマ(,)に変更
         $stringWithComma = str_replace("、", ",", $string);
         // 全角英数字を半角に、半角カタカナを全角に
@@ -41,14 +41,14 @@ class SearchWords
     }
 
     // コンマで区切る
-    public function splitByComma(string $string)
+    public function splitByComma(string $string): array
     {
         $wordsArray = explode(",", $string);
         return $wordsArray;
     }
 
     // 検索語群の様式を整える
-    function format(array $wordsArray)
+    function format(array $wordsArray): array
     {
         foreach ($wordsArray as $key => $value) {
             // スペースを削除
