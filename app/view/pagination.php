@@ -1,3 +1,12 @@
+<?php
+
+declare(strict_types=1);
+require_once("./app/controller/PageCalculator.php");
+
+$totalPages = (new PageCalculator($searchResult))->calculate($displayCount);
+
+?>
+
 <?php if ($totalPages >= 2) : ?>
     <?php if ($currentPage !== 1) : ?>
         <a href=<?php echo "result?search_words=$searchWordString&検索開始=送信&page=1&display_count=$displayCount" ?>>&lt;&lt;</a>
