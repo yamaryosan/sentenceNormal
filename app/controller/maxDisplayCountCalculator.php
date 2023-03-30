@@ -21,7 +21,6 @@ class MaxDisplayCountCalculator
         $this->searchResultCount = $searchResultCount;
         $this->offset = $offset;
         $this->displayCount = $displayCount;
-        var_dump($searchResultCount, $offset, $displayCount);
         $this->maxDisplayCountThisPage = self::calculate($searchResultCount, $offset, $displayCount);
     }
     function calculate()
