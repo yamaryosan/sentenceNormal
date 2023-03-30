@@ -14,6 +14,18 @@ function retrySearchIfEmpty(SearchWords $searchWords): void
     }
 }
 
+// 検索結果が一件もない場合やり直しさせる
+function retrySearchIfNoResult(array $searchResult): void
+{
+    if (empty($searchResult)) {
+        echo "<script>
+        alert('検索結果がありません。検索語を変えてください。');
+        history.back();
+    </script>";
+        exit;
+    }
+}
+
 // 検索語が多すぎる場合やり直しさせる
 function retrySearchIfTooManyResults(array $searchResult): void
 {
