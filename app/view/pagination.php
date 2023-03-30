@@ -1,9 +1,9 @@
 <?php
 
 declare(strict_types=1);
-require_once("./app/controller/PageCalculator.php");
+require_once("./app/controller/totalResultPagesCalculator.php");
 
-$totalPages = (new PageCalculator($searchResult))->calculate($displayCount);
+$totalPages = (new TotalResultPagesCalculator($searchResult, $displayCount))->get();
 
 ?>
 
