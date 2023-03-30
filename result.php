@@ -51,7 +51,6 @@ $offset = ($currentPage - 1) * $displayCount;
 
 // 一度に表示する検索結果の数を計算
 $maxDisplayCountThisPage = (new MaxDisplayCountCalculator(count($searchResult), $offset, $displayCount))->get();
-echo $maxDisplayCountThisPage;
 ?>
 
 <!DOCTYPE html>
