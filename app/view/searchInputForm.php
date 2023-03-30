@@ -25,6 +25,6 @@
         <a href="javascript:document.search_form.submit()" class="btn btn-primary search_button">検索</a>
         <!-- ページネーションのために設けている -->
         <input type="hidden" name="page" value="1">
-        <input type="hidden" name="display_number" value="25">
+        <input type="hidden" name="display_count" value="25">
     </form>
 </div>
