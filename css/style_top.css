@@ -1,0 +1,43 @@
+@media screen and (min-width:768px) {
+
+    /*　画面サイズが768px以上の場合読み込む　*/
+    .search_form_container {
+        border: 1px solid #000;
+        border-radius: 1px;
+    }
+
+    .search_button_container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .search_button {
+        font-size: 0.8em;
+        margin-top: 1em;
+        width: 30%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:767px) {
+
+    /*　画面サイズが767px以下の場合読み込む　*/
+    .search_form_container {
+        border: 1px solid #000;
+        border-radius: 1px;
+    }
+
+    .search_button_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search_button {
+        font-size: 0.8em;
+        margin-top: 1em;
+        width: 80%;
+        text-align: center;
+    }
+}
