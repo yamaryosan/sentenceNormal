@@ -4,7 +4,8 @@ declare(strict_types=1);
 /**
  * 検索語群のクラス
  * 
- * @param array $words 検索語群
+ * @param string $postWords 検索語群の文字列
+ * @var array $words 検索語群の配列
  */
 class SearchWords
 {
