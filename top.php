@@ -22,8 +22,10 @@ $searchHistory = (new SearchHistory($historyCount))->get();
     <meta charset="utf-8">
     <title>プログラミング備忘録</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style_common.css">
-    <link rel="stylesheet" href="./css/style_top.css">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/top/common.css">
+    <link rel="stylesheet" media="screen and (max-width: 767px)" href="css/top/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 768px)" href="css/top/desktop.css">
     <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
 </head>
 
@@ -32,7 +34,7 @@ $searchHistory = (new SearchHistory($historyCount))->get();
         <!-- 何も書かない -->
     </header>
     <main>
-        <div class="container">
+        <div class="container main_container">
             <div class="row">
                 <!-- 検索フォーム -->
                 <?php require_once("./app/view/searchInputForm.php"); ?>

@@ -5,3 +5,7 @@
 .search_button {
     width: 30%;
 }
+
+.search_history_string {
+    font-size: 1.2rem;
+}

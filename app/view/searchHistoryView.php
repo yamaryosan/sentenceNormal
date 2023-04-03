@@ -3,9 +3,11 @@
 declare(strict_types=1);
 
 ?>
-
-<?php foreach ($searchHistory as $history) : ?>
-    <div class="col-12">
-        <a href=<?php echo "search.php?search_words=$history" ?>><?php echo $history ?></a>
-    </div>
-<?php endforeach ?>
+<div class="mt-3 search_history_container">
+    <p>検索履歴</p>
+    <?php foreach ($searchHistory as $history) : ?>
+        <div class="mx-auto">
+            <a class="search_history_string" href=<?php echo "search.php?search_words=$history" ?>><?php echo $history ?></a>
+        </div>
+    <?php endforeach ?>
+</div>
