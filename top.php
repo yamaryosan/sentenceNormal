@@ -2,21 +2,16 @@
 
 declare(strict_types=1);
 require_once("./app/model/cookie.php");
-require_once("./app/classSearchHistoryGetter.php");
+require_once("./app/model/previousInputString.php");
+require_once("./app/model/searchHistory.php");
 header("Cache-Control: no-cache, must-revalidate");
 
-// クッキーを取得
-if (isset($_COOKIE["search_word_cookie"])) {
-    $cookie = new Cookie($_COOKIE["search_word_cookie"]);
-    $previousSearchWord = $cookie->getString();
-} else {
-    $previousSearchWord = "";
-}
+// 以前入力されていた文字列を取得
+$previousInputString = (new PreviousInputString("search_word_cookie"))->getString();
 
 // 履歴取得
-$historyShowNumber = 10;
-$searchHistoryGetter = new SearchHistoryGetter($historyShowNumber);
-$result = $searchHistoryGetter->get();
+$historyCount = 10;
+$searchHistory = (new SearchHistory($historyCount))->get();
 
 ?>
 
@@ -34,14 +29,15 @@ $result = $searchHistoryGetter->get();
 
 <body>
     <header>
-        <h1>
-            <a href=<?php echo "top.php" ?>>プログラミング備忘録</a>
-        </h1>
+        <!-- 何も書かない -->
     </header>
     <main>
         <div class="container">
             <div class="row">
+                <!-- 検索フォーム -->
                 <?php require_once("./app/view/searchInputForm.php"); ?>
+                <!-- 検索履歴 -->
+                <?php require_once("./app/view/searchHistoryView.php"); ?>
             </div>
         </div>
     </main>
