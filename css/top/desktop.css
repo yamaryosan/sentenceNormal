@@ -1,0 +1,7 @@
+.search_button_container {
+    justify-content: flex-end;
+}
+
+.search_button {
+    width: 30%;
+}
