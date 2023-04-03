@@ -1,0 +1,69 @@
+.clickable_area {
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    color: #0a0a0a;
+}
+
+.back_btn_container a {
+    display: flex;
+    bottom: 20px;
+    right: 20px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    width: 100px;
+    height: 100px;
+}
+
+.back_btn_container a img {
+    width: 60px;
+    height: auto;
+}
+
+.back_btn {
+    position: fixed;
+    border-radius: 50%;
+    background-color: rgb(216, 216, 216);
+    color: #0a0a0a;
+    border: 3px black solid;
+    transition: 300ms;
+    opacity: 0.2;
+}
+
+.back_btn:hover {
+    opacity: 0.8;
+}
+
+.back_btn:active {
+    background-color: rgb(119, 119, 119);
+    transition: none;
+}
+
+.to_top_btn_container a {
+    bottom: 160px;
+    right: 20px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    width: 100px;
+    height: 100px;
+}
+
+.to_top_btn_container a img {
+    width: 60px;
+    height: auto;
+}
+
+.to_top_btn {
+    position: fixed;
+    border-radius: 50%;
+    background-color: rgb(216, 216, 216);
+    color: #0a0a0a;
+    border: 3px black solid;
+    transition: 300ms;
+    opacity: 0.2;
+    display: none;
+}
