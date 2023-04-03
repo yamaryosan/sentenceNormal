@@ -6,16 +6,17 @@ main {
 
 .search_form_container {
     border: 1px solid #000;
-    border-radius: 1px;
+    border-radius: 0.1rem;
+    background-color: #e4e4e4;
 }
 
 .search_button_container {
     display: flex;
     align-items: center;
+    text-align: center;
 }
 
 .search_button {
-    font-size: 0.8em;
-    margin-top: 1em;
-    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
