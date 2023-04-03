@@ -12,3 +12,7 @@
     border-radius: 0.3rem;
     background-color: #e4e4e4;
 }
+
+.search_history_string:active {
+    background-color: #8b8b8b;
+}

@@ -9,3 +9,7 @@
 .search_history_string {
     font-size: 1.2rem;
 }
+
+.search_history_string:hover {
+    background-color: #e4e4e4;
+}

@@ -36,11 +36,7 @@ main {
     padding: 0px 2rem;
 }
 
-.search_history_string:hover {
-    background-color: #e4e4e4;
-}
-
 .search_history_string:active {
     background-color: #e4e4e4;
-    color: #cb0000;
+    color: #007cb2;
 }
