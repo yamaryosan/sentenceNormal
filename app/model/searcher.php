@@ -3,7 +3,7 @@
 declare(strict_types=1);
 require_once("./app/model/database.php");
 /**
- * 検索語のクラス
+ * 検索を行うクラス
  * @param SearchWords $searchWords
  * 
  */
