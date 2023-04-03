@@ -1,0 +1,8 @@
+/* アプリケーション全体の設定 */
+
+html {
+    font-family: Segoe UI, Arial, Meiryo, sans-serif;
+    font-size: 20px;
+    color: #0a0a0a;
+    background-color: #fff;
+}
