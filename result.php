@@ -22,13 +22,12 @@ $searchWords = new SearchWords($searchWordString);
 $searchWordByComma = $searchWords->getStringByComma();
 # $searchTarget = $_GET["search_target"];
 
+// 文字列が空の場合、やり直させる
+retrySearchIfEmpty($searchWords);
 
 // 検索
 $searchResult = (new Searcher($searchWords))->search();
 # $searchResult = $searcher->search($searchTarget);
-
-// 文字列が空の場合、やり直させる
-retrySearchIfEmpty($searchWords);
 
 // 検索結果が一件もない場合、やり直させる
 retrySearchIfNoResult($searchResult);
@@ -62,12 +61,14 @@ $maxDisplayCountThisPage = (new MaxDisplayCountCalculator(count($searchResult), 
 <head>
     <meta charset="utf-8">
     <title>プレビュー</title>
-    <link rel="stylesheet" href="./css/style_preview.css">
+    <link rel="stylesheet" href="./css/style_common.css">
+    <link rel="stylesheet" href="./css/style_result.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
 </head>
 
 <body>
     <div class="main_container">
-        <!-- ヒット数 -->
+        <!-- ヒット数を表示 -->
         <div class="hit_count_text_container">
             <?php require("./app/view/hitCount.php") ?>
         </div>
