@@ -13,3 +13,31 @@
     font-size: 1.5rem;
     margin-top: 1rem;
 }
+
+.pagination_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(0.6rem, 2.5vw, 4rem);
+    background-color: red;
+    margin-top: 0px 0.5rem;
+}
+
+.page_number_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(0.6rem, 4vw, 3rem);
+    background-color: red;
+    margin-top: 0px 0.5rem;
+}
+
+
+.symbol {
+    display: block;
+    text-decoration: none;
+    font-size: clamp(0.6rem, 4vw, 3rem);
+    margin: 0px 0.5rem;
+}
