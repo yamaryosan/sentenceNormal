@@ -1,6 +1,8 @@
-<p>検索結果</p>
-<?php if (count($searchResult) === 0) : ?>
-    <?php echo "一件もヒットしませんでした。" ?>
-<?php else : ?>
-    <?php echo count($searchResult) . "件ヒットしました。" ?>
-<?php endif ?>
+<div class="hit_count_container">
+    <p>検索結果</p>
+    <?php if (count($searchResult) === 0) : ?>
+        <?php echo "一件もヒットしませんでした。" ?>
+    <?php else : ?>
+        <?php echo count($searchResult) . "件ヒットしました。" ?>
+    <?php endif ?>
+</div>
