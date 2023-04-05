@@ -133,3 +133,7 @@
 .top_btn_container a img {
     height: auto;
 }
+
+footer {
+    display: none;
+}
