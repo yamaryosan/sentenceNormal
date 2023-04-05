@@ -98,8 +98,17 @@ $maxDisplayCountThisPage = (new MaxDisplayCountCalculator(count($searchResult), 
                 <img src="./images/toTopIcon.png">
             </a>
         </div>
+        <footer>
+            <div class="footer_container">
+                <span>
+                    <!-- 現在のページの最初の検索結果の番号 -->
+                    <?php echo $offset + 1 ?>
+                </span>
+        </footer>
     </main>
+    <!-- ページ移動 -->
     <script type="module" src="./js/previewPageMoveController.js"></script>
+    <!-- 画面最上部に戻るボタンのスクロール -->
     <script src="./js/topButtonScroll.js"></script>
 </body>
 
