@@ -4,8 +4,8 @@ declare(strict_types=1);
 require_once("./app/controller/totalResultPagesCalculator.php");
 
 $totalPages = (new TotalResultPagesCalculator($searchResult, $displayCount))->get();
-$pageLinkRange = 3;
-$skipPagesStep = 5;
+$pageLinkRange = 2;
+$skipPagesStep = 3;
 
 ?>
 

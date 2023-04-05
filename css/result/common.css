@@ -19,8 +19,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-size: clamp(0.6rem, 2.5vw, 4rem);
-    background-color: red;
     margin-top: 0px 0.5rem;
 }
 
@@ -29,15 +27,109 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-size: clamp(0.6rem, 4vw, 3rem);
-    background-color: red;
-    margin-top: 0px 0.5rem;
 }
 
+.this_page_number, .other_page_number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: clamp(0.6rem, 4vw, 3rem);
+    padding: 0px clamp(0.6rem, 1.0vw, 4rem);
+    background-color: white;
+    border: 3px black solid;
+}
+
+.this_page_number {
+    color: black;
+}
+
+.other_page_number {
+    color: rgb(64, 64, 255);
+}
+
+.other_page_number:hover {
+    color: rgb(0, 0, 119);
+    background-color: rgb(216, 216, 216);
+    transition: 300ms;
+}
+
+:is(.other_page_number, .symbol):active {
+    background-color: rgb(60, 60, 60);
+    transition: 100ms;
+}
 
 .symbol {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     font-size: clamp(0.6rem, 4vw, 3rem);
     margin: 0px 0.5rem;
+    color: black;
+    background-color: white;
+    border: 3px black solid;
+}
+
+.content {
+    margin-top: 2rem;
+}
+
+.back_btn {
+    position: fixed;
+    border-radius: 50%;
+    background-color: rgb(216, 216, 216);
+    color: #0a0a0a;
+    border: 3px black solid;
+    transition: 300ms;
+    opacity: 0.2;
+}
+
+.back_btn:hover {
+    opacity: 0.8;
+}
+
+.back_btn_container a {
+    display: flex;
+    bottom: 20px;
+    right: 20px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.back_btn_container a img {
+    height: auto;
+}
+
+:is(.back_btn, .to_top_btn):active {
+    background-color: rgb(119, 119, 119);
+    transition: none;
+}
+
+.to_top_btn {
+    position: fixed;
+    border-radius: 50%;
+    background-color: rgb(216, 216, 216);
+    color: #0a0a0a;
+    border: 3px black solid;
+    transition: 300ms;
+    opacity: 0.2;
+    display: none;
+}
+
+.to_top_btn_container a {
+    bottom: 160px;
+    right: 20px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    width: 100px;
+    height: 100px;
+}
+
+.to_top_btn_container a img {
+    height: auto;
 }
