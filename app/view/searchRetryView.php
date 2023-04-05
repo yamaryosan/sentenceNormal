@@ -29,7 +29,7 @@ function retrySearchIfNoResult(array $searchResult): void
 // 検索語が多すぎる場合やり直しさせる
 function retrySearchIfTooManyResults(array $searchResult): void
 {
-    $requestRetryHitNumber = 400;
+    $requestRetryHitNumber = 1000;
     if (count($searchResult) > $requestRetryHitNumber) {
         echo "<script>
         alert('検索結果が多すぎます。検索語を減らしてください。');
