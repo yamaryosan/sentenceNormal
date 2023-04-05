@@ -1,6 +1,6 @@
 <?php
 
-require_once("./app/model/SearchWords.php");
+require_once("./app/model/searchWords.php");
 
 // 検索語が空の場合やり直しさせる
 function retrySearchIfEmpty(SearchWords $searchWords): void
