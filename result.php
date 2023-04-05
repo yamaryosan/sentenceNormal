@@ -61,52 +61,46 @@ $maxDisplayCountThisPage = (new MaxDisplayCountCalculator(count($searchResult), 
 <head>
     <meta charset="utf-8">
     <title>プレビュー</title>
-    <link rel="stylesheet" href="./css/style_common.css">
-    <link rel="stylesheet" href="./css/style_result.css">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="./css/result/common.css">
+    <link rel="stylesheet" media="screen and (max-width: 767px)" href="css/result/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 768px)" href="css/result/desktop.css">
+    <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
 </head>
 
 <body>
-    <div class="main_container">
-        <!-- ヒット数を表示 -->
-        <div class="hit_count_text_container">
+    <header>
+        <!-- 何も書かない -->
+    </header>
+    <main>
+        <div class="container">
+            <!-- ヒット数を表示 -->
             <?php require("./app/view/hitCount.php") ?>
-        </div>
-        <!-- 表示数 -->
-        <div class="display_number_container">
-            <?php require("./app/functionDisplayNumberForm.php") ?>
-        </div>
-        <!-- ページネーション -->
-        <div class="pagination_container">
+            <!-- 表示数 -->
+            <?php require("./app/view/displayCountDecisionView.php") ?>
+            <!-- ページネーション -->
+            <?php require("./app/view/pagination.php") ?>
+            <!-- 結果 -->
+            <?php require("./app/view/resultView.php") ?>
+            <!-- ページネーション -->
             <?php require("./app/view/pagination.php") ?>
         </div>
-        <!-- 結果 -->
-        <div class="results_container">
-            <?php require("./app/functionSearchResult.php") ?>
-        </div>
-        <!-- ページネーション -->
-        <div class="pagination_container">
-            <?php require("./app/view/pagination.php") ?>
-        </div>
-        <!-- ページ最下部の戻るボタン -->
-        <div class="page_lower_back_btn_container">
-            <a href="top" class="page_lower_back_btn">戻る</a>
-        </div>
-        <!-- ページ右下部のトップへ戻るボタン -->
-        <div class="back_btn_container">
-            <a href="top" class="back_btn">
-                <img src="./images/backBtnIcon.png">
+        <!-- 検索画面に戻る位置固定のボタン -->
+        <div class="search_btn_container">
+            <a href="top" class="search_btn">
+                <img src="./images/searchBtnIcon.png">
             </a>
         </div>
-        <!-- ページ右下部の画面トップへ戻るボタン(後で書き換えよう) -->
-        <div class="to_top_btn_container">
-            <a href="#" class="to_top_btn">
+        <!-- 画面最上部に戻るボタン -->
+        <div class="top_btn_container">
+            <a href="#" class="top_btn">
                 <img src="./images/toTopIcon.png">
             </a>
         </div>
-    </div>
+    </main>
     <script type="module" src="./js/previewPageMoveController.js"></script>
-    <script src="./js/toTopButtonScroll.js"></script>
+    <script src="./js/topButtonScroll.js"></script>
 </body>
 
 </html>
