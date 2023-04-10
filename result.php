@@ -104,6 +104,7 @@ $maxDisplayCountThisPage = (new MaxDisplayCountCalculator(count($searchResult), 
                     <!-- 現在のページの最初の検索結果の番号 -->
                     <?php echo $offset + 1 ?>
                 </span>
+            </div>
         </footer>
     </main>
     <!-- ページ移動 -->
