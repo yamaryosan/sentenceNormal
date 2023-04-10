@@ -1,0 +1,8 @@
+vendor/
+uploads/
+images/
+config/
+css/bootstrap/
+js/bootstrap/
+composer.json
+composer.lock
