@@ -1,7 +1,6 @@
 import getDisplayCount from "./getDisplayCount.js";
 import setFirstResultNumber from "./setFirstResultNumber.js";
 import getPreviousFirstResultNumber from "./getFirstResultNumber.js";
-import getCurrentPageNumberKey from "./functionGetPageNumber.js";
 
 // 現在のURLを取得
 function getPreviewPageURL() {
@@ -112,13 +111,13 @@ function event(dropdown) {
   const previousFirstResultNumber = getPreviousFirstResultNumber();
 
   // 表示数keyの部分をURLから消去
-  const pageULRDisplayCountRemoved = removeDisplayNumberKey(pageURL);
+  const pageURLDisplayCountRemoved = removeDisplayNumberKey(pageURL);
 
   // 表示数keyをURLに付加
   const pageURLDisplayNumberAdded = addDisplayNumberKey(
     dropdown,
     currentDisplayCount,
-    pageULRDisplayCountRemoved
+    pageURLDisplayCountRemoved
   );
 
   // 遷移先のページ番号を計算
@@ -131,9 +130,6 @@ function event(dropdown) {
   const pageURLPageNumberRemoved = removePageNumberKey(
     pageURLDisplayNumberAdded
   );
-
-  // 現在のページ番号を取得
-  // const currentPageNumber = getCurrentPageNumberKey(pageURLDisplayNumberAdded);
 
   // ページ番号keyをURLに付加
   const pageURLPageNumberAdded = addPageNumberKey(

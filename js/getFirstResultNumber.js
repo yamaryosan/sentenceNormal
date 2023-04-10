@@ -1,7 +1,10 @@
 // ページの一番上の項目の番号を取得
 function getFirstResultNumberFromQuery() {
   const firstUnitSpan = document.querySelector("footer > div > span");
-  const firstResultNumber = firstUnitSpan.text;
+  if (firstUnitSpan === null) {
+    console.log("firstUnitSpan is null");
+  }
+  const firstResultNumber = firstUnitSpan.textContent;
   return firstResultNumber;
 }
 
