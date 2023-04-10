@@ -23,7 +23,6 @@ window.onscroll = function () {
     document.documentElement.scrollTop > buttonAppearScrollAmount
   ) {
     toTopButton.style.opacity = calcOpacity(document.documentElement.scrollTop);
-    console.log(toTopButton.style.opacity);
     toTopButton.style.display = "flex";
   } else {
     toTopButton.style.display = "none";
