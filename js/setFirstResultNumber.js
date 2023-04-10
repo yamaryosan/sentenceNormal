@@ -1,3 +1,5 @@
+import getFirstResultNumberFromQuery from "./getFirstResultNumber.js";
+
 // ページの一番上の項目の番号を保存
 function setFirstResultNumber() {
   const firstResultNumber = getFirstResultNumberFromQuery();
