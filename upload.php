@@ -1,8 +1,8 @@
 <?php
 
 declare(strict_types=1);
-require_once("./app/model/classUploader.php");
-require_once("./app/model/classDataSaver.php");
+require_once("./app/model/uploader.php");
+require_once("./app/model/dataSaver.php");
 
 header("Cache-Control: no-cache, must-revalidate");
 
