@@ -47,7 +47,7 @@ if (isset($_FILES["uploaded-file"]) === true) {
         <input type="submit" class="submit-btn" value="アップロード">
     </form>
     <button onclick="location.href='top'">検索ページへ移動</button>
-    <a href="deleteDatabasePage">データベースを削除</a>
+    <a href="delete">データベースを削除</a>
 </body>
 
 </html>
